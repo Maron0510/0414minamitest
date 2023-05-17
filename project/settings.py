@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-w!@#!oiayj9g4l#gr_9jzr#6s4(=faalz)x@f5p7^gr7bztkt9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'maron0510.pythonanywhere.com']
 
 # Application definition
 
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',  #追加
     'crispy_bootstrap4',
+    'bootstrap_datepicker_plus',
     'app', #追加
 ]
 

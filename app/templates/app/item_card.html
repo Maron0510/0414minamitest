@@ -1,6 +1,14 @@
 <div class="row">
     <div class="col-3">
-        <p>名前</p>
+        <p>管理籍</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.kanri }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>製品名</p>
     </div>
     <div class="col-9">
         <p>{{ item.name }}</p>
@@ -8,18 +16,58 @@
 </div>
 <div class="row">
     <div class="col-3">
-        <p>年齢</p>
+        <p>中型</p>
     </div>
     <div class="col-9">
-        <p>{{ item.age }}</p>
+        <p>{{ item.naka }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-3">
-        <p>性別</p>
+        <p>フレーム</p>
     </div>
     <div class="col-9">
-        <p>{{ item.get_sex_display }}</p>
+        <p>{{ item.hure }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>フレーム高さ移動側</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.idou }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>フレーム高さ固定側</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.kotei }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>他社金型</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.get_hoka_display }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>成型機</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.seikei }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>製品図面</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.get_zumen_display }}</p>
     </div>
 </div>
 <div class="row">
@@ -32,9 +80,9 @@
 </div>
 <div class="row">
     <div class="col-3">
-        <p>登録日</p>
+        <p>製造日</p>
     </div>
     <div class="col-9">
-        <p>{{ item.created_at|date:"Y/m/d G:i:s" }}</p>
+        <p>{{ item.created_at|date:"Y/m/d " }}</p>
     </div>
 </div>

@@ -11,7 +11,7 @@ from .forms import ItemForm
 
 # Create your views here.
 # 検索一覧画面
-class ItemFilterView(LoginRequiredMixin, FilterView):
+class ItemFilterView( FilterView):
     model = Item
     filterset_class = ItemFilter
     # デフォルトの並び順を新しい順とする
@@ -22,7 +22,6 @@ class ItemFilterView(LoginRequiredMixin, FilterView):
 
     # 1ページあたりの表示件数
     paginate_by = 10
-
     # 検索条件をセッションに保存する or 呼び出す
     def get(self, request, **kwargs):
         if request.GET:
@@ -37,12 +36,12 @@ class ItemFilterView(LoginRequiredMixin, FilterView):
 
 
 # 詳細画面
-class ItemDetailView(LoginRequiredMixin, DetailView):
+class ItemDetailView( DetailView):
     model = Item
 
 
 # 登録画面
-class ItemCreateView(LoginRequiredMixin, CreateView):
+class ItemCreateView( LoginRequiredMixin,CreateView):
     model = Item
     form_class = ItemForm
     success_url = reverse_lazy('index')
